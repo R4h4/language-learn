@@ -5,7 +5,7 @@
 
 # Your App's title. The value of this parameter will be propagated into
 # `app.title`
-TITLE = "thuy_language_learn"
+TITLE = "Speaking recipes with Hannah"
 
 # The value of this parameter will be propagated into both
 # `app.scripts.config.serve_locally` and `app.css.config.serve_locally`
@@ -39,6 +39,12 @@ EXTERNAL_STYLESHEETS = []
 # Externally hosted Javascript files go in here.
 EXTERNAL_SCRIPTS = []
 
+
+#
+# Database config
+#
+
+SQLALCHEMY_DATABASE_URI = 'sqlite:////tmp/language.db'
 
 #
 # Layout config
