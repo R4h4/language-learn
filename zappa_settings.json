@@ -1,0 +1,9 @@
+{
+    "dev": {
+        "app_function": "app.server",
+        "profile_name": "karsten-zappa",
+        "project_name": "language-learn",
+        "runtime": "python3.6",
+        "s3_bucket": "zappa-g0nrntpcu"
+    }
+}

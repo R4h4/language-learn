@@ -1,9 +1,10 @@
 import dash_html_components as html
 
-from .app import app
-from .utils import DashRouter, DashNavBar
-from .pages import character_counter, page2, page3
-from .components import fa
+from app import app
+from utils import DashRouter, DashNavBar
+from pages import page2
+from pages import page3, character_counter
+from components import fa
 
 
 # Ordered iterable of routes: tuples of (route, layout), where 'route' is a

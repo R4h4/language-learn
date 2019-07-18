@@ -2,7 +2,7 @@
 
 import click
 
-from .app import app
+from app import app
 
 
 @click.command()

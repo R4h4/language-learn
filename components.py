@@ -3,7 +3,7 @@ import dash_html_components as html
 import dash_bootstrap_components as dbc
 from flask import current_app as server
 
-from .utils import get_url, component
+from utils import get_url, component
 
 
 def fa(className):

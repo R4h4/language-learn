@@ -11,8 +11,8 @@ from dash.development.base_component import Component
 from flask import current_app as server
 from werkzeug.datastructures import MultiDict
 
-from .pages import page_not_found
-from .exceptions import InvalidLayoutError
+from pages import page_not_found
+from exceptions import InvalidLayoutError
 
 
 def component(func):

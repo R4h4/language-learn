@@ -1,11 +1,11 @@
 from flask import Flask
 from dash import Dash
 
-from .__version__ import __version__
-from .utils import get_dash_args_from_flask_config
+from __version__ import __version__
+from utils import get_dash_args_from_flask_config
 
 
-def create_flask(config_object=f"{__package__}.settings"):
+def create_flask(config_object):
     """Create the Flask instance for this application"""
     server = Flask(__package__)
 
