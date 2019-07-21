@@ -6,6 +6,7 @@ chapters = {
     },
     "2": {
         "name": "A more advances chapter",
+        "image": "/assets/images/placeholder286x180.png",
         "color": "#CE1D25"
     }
 }
