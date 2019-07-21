@@ -17,8 +17,9 @@ def load_available_chapters(_):
     chapter_data = get_chapters()
     chapters = dbc.Row(
         [
-            dbc.Col(
-                [
+            html.A(
+                href=f"./Chapter/{c_id}",
+                children=[
                     dbc.Card(
                         [
                             dbc.CardImg(src=c['image'], top=True),
@@ -32,7 +33,7 @@ def load_available_chapters(_):
                         color=c['color']
                     )
                 ],
-                width=3
+                className="mb-3 col-sm-4 col-md-4 col-6"
             ) for c_id, c in chapter_data.items()
         ]
     )
