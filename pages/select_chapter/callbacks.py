@@ -17,23 +17,22 @@ def load_available_chapters(_):
     chapter_data = get_chapters()
     chapters = dbc.Row(
         [
-            html.A(
+            dbc.Col(
                 href=f"./Chapter/{c_id}",
                 children=[
                     dbc.Card(
                         [
                             dbc.CardImg(src=c['image'], top=True),
                             dbc.CardBody(
-                                [
-                                    html.H4(c['name'], className="card-title"),
-                                    dbc.Button("Start", color="primary"),
-                                ]
+                                html.H4(c['name'], className="card-title")
                             ),
                         ],
                         color=c['color']
                     )
                 ],
-                className="mb-3 col-sm-4 col-md-4 col-6"
+                width=6,
+                md=4,
+                lg=4,
             ) for c_id, c in chapter_data.items()
         ]
     )
