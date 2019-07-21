@@ -12,7 +12,7 @@ def get_chapters():
 
 
 @app.callback(Output('chapters_available', 'children'),
-             Input('chapters_available', 'id'))
+              [Input('chapters_available', 'id')])
 def load_available_chapters(_):
     chapter_data = get_chapters()
     chapters = dbc.Row(
