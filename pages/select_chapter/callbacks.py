@@ -33,7 +33,7 @@ def load_available_chapters(_):
                     )
                 ],
                 width=3
-            ) for c in chapter_data
+            ) for c_id, c in chapter_data.items()
         ]
     )
     return chapters

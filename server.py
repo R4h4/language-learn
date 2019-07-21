@@ -1,3 +1,6 @@
+import os
+from random import randint
+
 from flask import Flask
 from dash import Dash
 
@@ -17,6 +20,8 @@ def create_flask(config_object):
     server.config.from_envvar(
         "THUY_LANGUAGE_LEARN_SETTINGS", silent=True
     )
+
+    server.secret_key = os.environ.get('secret_key', str(randint(0, 1000000)))
 
     return server
 
