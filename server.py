@@ -7,7 +7,7 @@ from utils import get_dash_args_from_flask_config
 
 def create_flask(config_object):
     """Create the Flask instance for this application"""
-    server = Flask(__package__)
+    server = Flask(__name__)
 
     # load default settings
     server.config.from_object(config_object)
@@ -24,7 +24,7 @@ def create_flask(config_object):
 def create_dash(server):
     """Create the Dash instance for this application"""
     app = Dash(
-        name=__package__,
+        name=__name__,
         server=server,
         suppress_callback_exceptions=True,
         **get_dash_args_from_flask_config(server.config),
