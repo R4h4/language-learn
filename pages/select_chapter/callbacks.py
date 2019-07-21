@@ -18,18 +18,20 @@ def load_available_chapters(_):
     chapters = dbc.Row(
         [
             dbc.Col(
-                href=f"./Chapter/{c_id}",
-                children=[
-                    dbc.Card(
-                        [
-                            dbc.CardImg(src=c['image'], top=True),
-                            dbc.CardBody(
-                                html.H4(c['name'], className="card-title")
-                            ),
-                        ],
-                        color=c['color']
-                    )
-                ],
+                html.A(
+                    href=f"./Chapter/{c_id}",
+                    children=[
+                        dbc.Card(
+                            [
+                                dbc.CardImg(src=c['image'], top=True),
+                                dbc.CardBody(
+                                    html.H4(c['name'], className="card-title")
+                                ),
+                            ],
+                            color=c['color']
+                        )
+                    ],
+                ),
                 width=6,
                 md=4,
                 lg=4,
