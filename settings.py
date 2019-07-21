@@ -36,7 +36,6 @@ class Configs:
     #
     # import dash_bootstrap_components as dbc
     # EXTERNAL_STYLESHEETS = [dbc.themes.CYBORG]
-    EXTERNAL_STYLESHEETS = []
 
     # Externally hosted Javascript files go in here.
     EXTERNAL_SCRIPTS = []
@@ -45,6 +44,11 @@ class Configs:
     #
     # Layout config
     #
+
+    META_TAGS = [
+        {'charset': 'utf-8'},
+        {'name': 'viewport', 'content': 'width=device-width, initial-scale=1'}
+    ]
 
     # The ID of the dcc.Location component used for multi-page apps
     LOCATION_COMPONENT_ID = "dash-location"

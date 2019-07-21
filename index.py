@@ -2,6 +2,7 @@ import dash_html_components as html
 
 from app import app
 from utils import DashRouter, DashNavBar
+from pages import select_chapter
 from pages import page2
 from pages import page3, character_counter
 from components import fa
@@ -11,7 +12,7 @@ from components import fa
 # string corresponding to path of the route (will be prefixed with Dash's
 # 'routes_pathname_prefix' and 'layout' is a Dash Component.
 urls = (
-    ("", character_counter.get_layout),
+    ("", select_chapter.layout),
     ("character-counter", character_counter.get_layout),
     ("page2", page2.layout),
     ("page3", page3.layout),

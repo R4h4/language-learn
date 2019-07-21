@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 from server import create_flask, create_dash
-from layouts import main_layout_header, main_layout_sidebar
+from components import main_layout_header, main_layout_sidebar
 from settings import Configs
 
 # The Flask instance
