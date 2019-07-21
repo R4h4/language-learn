@@ -29,7 +29,7 @@ def load_available_chapters(_):
                                 ]
                             ),
                         ],
-                        color=c['colors']
+                        color=c['color']
                     )
                 ],
                 width=3
