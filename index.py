@@ -1,4 +1,5 @@
 import dash_html_components as html
+from dash.dependencies import Output, Input, State
 
 from app import app
 from utils import DashRouter, DashNavBar
@@ -30,3 +31,15 @@ nav_items = (
 
 router = DashRouter(app, urls)
 navbar = DashNavBar(app, nav_items)
+
+
+# add callback for toggling the collapse on small screens
+@app.callback(
+    Output("navbar-collapse", "is_open"),
+    [Input("navbar-toggler", "n_clicks")],
+    [State("navbar-collapse", "is_open")],
+)
+def toggle_navbar_collapse(n, is_open):
+    if n:
+        return not is_open
+    return is_open

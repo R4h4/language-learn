@@ -7,7 +7,7 @@ class Configs:
 
     # Your App's title. The value of this parameter will be propagated into
     # `app.title`
-    TITLE = "Speaking recipes with Hannah"
+    TITLE = "LanguageLearn"
 
     # The value of this parameter will be propagated into both
     # `app.scripts.config.serve_locally` and `app.css.config.serve_locally`

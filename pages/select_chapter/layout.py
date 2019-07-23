@@ -4,7 +4,7 @@ import dash_html_components as html
 
 layout = dbc.Container(
     [
-        html.H1("Select chapter"),
+        html.H1("Select chapter", className="mt-4"),
         html.Div(id='chapters_available')
     ]
 )

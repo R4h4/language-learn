@@ -11,6 +11,12 @@ def fa(className):
     return html.I(className=className)
 
 
+navbar_toggler = html.Button(
+    className='navbar-toggler',
+    type='button',
+)
+
+
 @component
 def make_brand(**kwargs):
     return html.Header(
@@ -32,9 +38,13 @@ def make_header(**kwargs):
         dark=True,
         children=[
             make_brand(),
-            html.Ul(
-                id=server.config["NAVBAR_CONTAINER_ID"], className="navbar-nav ml-auto"
-            ),
+            dbc.NavbarToggler(id="navbar-toggler"),
+            dbc.Collapse(
+                children=html.Ul(
+                    id=server.config["NAVBAR_CONTAINER_ID"], className="navbar-nav ml-auto"
+                ),
+                id="navbar-collapse",
+                navbar=True),
         ],
         **kwargs,
     )
@@ -42,7 +52,7 @@ def make_header(**kwargs):
 
 @component
 def make_sidebar(**kwargs):
-    return html.Nav(
+    return dbc.NavbarSimple(
         id=f"sidebar",
         className="nav navbar-dark bg-dark flex-column align-items-start",
         children=[make_brand(), html.Div(id=server.config["NAVBAR_CONTAINER_ID"])],
