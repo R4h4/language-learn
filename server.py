@@ -15,8 +15,6 @@ def create_flask(config_object):
     # load default settings
     server.config.from_object(config_object)
 
-    # load additional settings that will override the defaults in settings.py. eg
-    # $ export THUY_LANGUAGE_LEARN_SETTINGS=/some/path/prod_settings.py
     server.config.from_envvar(
         "THUY_LANGUAGE_LEARN_SETTINGS", silent=True
     )

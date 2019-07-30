@@ -4,8 +4,6 @@ from dash.dependencies import Output, Input, State
 from app import app
 from utils import DashRouter, DashNavBar
 from pages import select_chapter
-from pages import page2
-from pages import page3, character_counter
 from components import fa
 
 
@@ -14,9 +12,7 @@ from components import fa
 # 'routes_pathname_prefix' and 'layout' is a Dash Component.
 urls = (
     ("", select_chapter.layout),
-    ("character-counter", character_counter.get_layout),
-    ("page2", page2.layout),
-    ("page3", page3.layout),
+    ("chapters", select_chapter.layout),
 )
 
 # Ordered iterable of navbar items: tuples of `(route, display)`, where `route`
@@ -24,16 +20,16 @@ urls = (
 # 'routes_pathname_prefix') and 'display' is a valid value for the `children`
 # keyword argument for a Dash component (ie a Dash Component or a string).
 nav_items = (
-    ("character-counter", html.Div([fa("fas fa-keyboard"), "Character Counter"])),
-    ("page2", html.Div([fa("fas fa-chart-area"), "Page 2"])),
-    ("page3", html.Div([fa("fas fa-chart-line"), "Page 3"])),
+    ("chapters", html.Div([fa("fas fa-chart-area"), "Select Chapter"])),
+    ("profile", html.Div([fa("fas fa-chart-line"), "View Profile"])),
+    ("logout", html.Div([fa("fas fa-chart-line"), "Logout"])),
 )
 
 router = DashRouter(app, urls)
 navbar = DashNavBar(app, nav_items)
 
 
-# add callback for toggling the collapse on small screens
+# add callback for toggling the hamburger collapse on small screens
 @app.callback(
     Output("navbar-collapse", "is_open"),
     [Input("navbar-toggler", "n_clicks")],
