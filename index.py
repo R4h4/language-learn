@@ -3,7 +3,9 @@ from dash.dependencies import Output, Input, State
 
 from app import app
 from utils import DashRouter, DashNavBar
-from pages import select_chapter
+from pages import (select_chapter,
+                   logout,
+                   page)
 from components import fa
 
 
@@ -13,6 +15,8 @@ from components import fa
 urls = (
     ("", select_chapter.layout),
     ("chapters", select_chapter.layout),
+    ("logout", logout.layout),
+    ("page", page.layout)
 )
 
 # Ordered iterable of navbar items: tuples of `(route, display)`, where `route`
